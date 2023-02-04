@@ -9,7 +9,6 @@ const Header = () => {
           written by &nbsp;<span className="blue">Rishav Ghosh</span>
         </p>
       </header>
-
     </>
   )
 }

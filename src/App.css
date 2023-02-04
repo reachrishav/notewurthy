@@ -5,6 +5,10 @@
     font-family: 'Roboto', sans-serif;
 }
 
+body {
+    border-top: 5px solid #42B6F3;
+}
+
 header {
     justify-content: center;
 }
@@ -49,6 +53,10 @@ header {
     font-weight: 500;
 }
 
+.text-align-center {
+    text-align: center;
+}
+
 .no-txt-decor {
     text-decoration: none;
 }
@@ -62,14 +70,18 @@ header {
     transition: all 0.2s ease;
 }
 
+.light-text-color {
+    color: #818181;
+}
+
 .blog > div {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .blog {
-    margin-top: 1.2rem;
-    margin-bottom: 1.2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .light-font-weight {
@@ -98,4 +110,8 @@ header {
     border-color: #2b98d3;
     color: #2b98d3;
     transition: all 0.2s ease;
+}
+
+.large-margin {
+    margin: 30px
 }

@@ -6,19 +6,25 @@ const Blogs = (props) => {
             id: 1,
             title: 'Designing in the Build',
             description:  'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum, iure.', 
-            datePublished: '2023-01-01'
+            datePublished: 'FEB 02, 2023'
         },
         {
             id: 2,
             title: 'Second Blog',
             description:  'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum, iure.', 
-            datePublished: '2023-01-01'
+            datePublished: 'FEB 02, 2023'
         },
         {
             id: 3,
             title: 'Third Blog',
             description:  'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum, iure.', 
-            datePublished: '2023-01-01'
+            datePublished: 'FEB 02, 2023'
+        },
+        {
+            id: 4,
+            title: 'Fourth Blog',
+            description:  'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum, iure.', 
+            datePublished: 'FEB 02, 2023'
         }
     ]
   return (
