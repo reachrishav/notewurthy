@@ -1,117 +1,122 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
-    border-top: 5px solid #42B6F3;
+  border-top: 5px solid #42b6f3;
 }
 
 header {
-    justify-content: center;
+  justify-content: center;
 }
 
 .align-items-center {
-    align-items: center;
+  align-items: center;
 }
 
 .flex {
-    display: flex;
+  display: flex;
 }
 
 .space-evenly {
-    justify-content: space-evenly;
+  justify-content: space-evenly;
 }
 
 .space-around {
-    justify-content: space-around;
+  justify-content: space-around;
 }
 
 .blue {
-    color: #42b6f3;
+  color: #42b6f3;
 }
 
 .p-25 {
-    padding: 0.25em;
+  padding: 0.25em;
 }
 
 .mt-10 {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 .mb-10 {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .flex-direction-col {
-    flex-direction: column;
+  flex-direction: column;
 }
 
 .medium-font-weight {
-    font-weight: 500;
+  font-weight: 500;
 }
 
 .text-align-center {
-    text-align: center;
+  text-align: center;
 }
 
 .no-txt-decor {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .black {
-    color: black;
+  color: black;
 }
 
 .blue-on-hover:hover {
-    color: #42b6f3;
-    transition: all 0.2s ease;
+  color: #42b6f3;
+  transition: all 0.2s ease;
 }
 
 .light-text-color {
-    color: #818181;
+  color: #818181;
 }
 
 .blog > div {
-    margin-top: 10px;
-    margin-bottom: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .blog {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .light-font-weight {
-    font-weight: lighter;
+  font-weight: lighter;
 }
 
 .date-font {
-    line-height: 1;
-    font-size: 13px;
+  line-height: 1;
+  font-size: 13px;
 }
 
 .custom-button {
-    display: inline-block;
-    font-weight: 500;
-    color: #a5a5a5;
-    padding: 0 20px;
-    border-radius: 18px;
-    height: 36px;
-    line-height: 36px;
-    border: 1px solid #e2e2e2;
-    font-size: 13px;
-    background-color: white;
+  display: inline-block;
+  font-weight: 500;
+  color: #a5a5a5;
+  padding: 0 20px;
+  border-radius: 18px;
+  height: 36px;
+  line-height: 36px;
+  border: 1px solid #e2e2e2;
+  font-size: 13px;
+  background-color: white;
 }
 
 .custom-button:hover {
-    border-color: #2b98d3;
-    color: #2b98d3;
-    transition: all 0.2s ease;
+  border-color: #2b98d3;
+  color: #2b98d3;
+  transition: all 0.2s ease;
 }
 
 .large-margin {
-    margin: 30px
+  margin: 30px;
+}
+
+.theme-icon {
+  border: none;
+  background: none;
 }
