@@ -120,3 +120,15 @@ header {
   border: none;
   background: none;
 }
+
+header a{
+  text-decoration: none;
+}
+
+footer a{
+  text-decoration: none;
+}
+
+.italic {
+  font-style: italic;
+}
