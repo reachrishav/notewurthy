@@ -1,10 +1,10 @@
 import Blog from './Blog'
 
-const Blogs = () => {
+const Blogs = (props) => {
     let blogs = [
         {
             id: 1,
-            title: 'First Blog',
+            title: 'Designing in the Build',
             description:  'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum, iure.', 
             datePublished: '2023-01-01'
         },
@@ -22,9 +22,9 @@ const Blogs = () => {
         }
     ]
   return (
-    <>
-    {blogs.map(blog => <Blog key={blog.id} props = {blog}/>)}
-    </>
+    <div className={props.className}>
+        {blogs.map(blog => <Blog key={blog.id} props = {blog}/>)}
+    </div>
   )
 }
 

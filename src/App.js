@@ -5,9 +5,9 @@ import Blogs from './components/Blogs'
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <Header />
-      <Blogs />
+      <Blogs className="flex flex-direction-col align-items-center "/>
       <Footer />
     </div>
   );
