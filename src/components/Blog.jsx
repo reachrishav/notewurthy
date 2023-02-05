@@ -9,7 +9,7 @@ const Blog = (props) => {
       </div>
       <div>
         <Link
-          to={`/blog/${data.id}`}
+          to={`/blog/${data.id}`}     
           className='no-txt-decor black blue-on-hover'
         >
           <h1 className='medium-font-weight'>{data.title}</h1>

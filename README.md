@@ -1,3 +1,3 @@
-# React-Blog
+# Notewurthy
 
-A minimalistic blog made with React JS.
+A minimalistic blog built with React JS.

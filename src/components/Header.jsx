@@ -1,4 +1,6 @@
 import { useTheme, useThemeUpdate } from "../ThemeContext"
+import { Link } from "react-router-dom"
+
 const Header = () => {
   const toggleTheme = useThemeUpdate()
   const darkTheme = useTheme()
@@ -6,13 +8,20 @@ const Header = () => {
   return (
     <>
       <header className='flex space-evenly p-25 mt-10'>
-        <h2>
-          note<span className='blue italic'>wurthy </span>
-        </h2>
+        <Link to='/' class='home-link'>
+          <h2>
+            note<span className='blue ml-2 cursive'>wurthy </span>
+          </h2>
+        </Link>
+
         <p className='flex align-items-center'>
           writings by &nbsp;
-          <a href='https://www.linkedin.com/in/reachrishav/' target="_blank" rel="noreferrer">
-            <span className='blue'> Rishav Ghosh</span>
+          <a
+            href='https://www.linkedin.com/in/reachrishav/'
+            target='_blank'
+            rel='noreferrer'
+          >
+            <span className='blue'> Rishav</span>
           </a>
         </p>
         <button className='theme-icon' onClick={toggleTheme}>
