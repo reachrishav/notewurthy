@@ -8,7 +8,7 @@ const Blog = ({ blog }) => {
       </div>
       <div>
         <Link
-          to={`/blog/${blog.id}`}     
+          to={`/blog/${blog.id}`}
           className='no-txt-decor black blue-on-hover'
         >
           <h1 className='medium-font-weight'>{blog.title}</h1>
@@ -17,7 +17,9 @@ const Blog = ({ blog }) => {
       <div className='light-font-weight light-text-color'>
         {blog.description}
       </div>
-      <button className='custom-button'>Read More</button>
+      <Link to={`/blog/${blog.id}`}>
+        <button className='custom-button'>Read More</button>
+      </Link>
     </div>
   )
 }
