@@ -4,7 +4,7 @@ import Blogs from "./Blogs"
 import Footer from "./Footer"
 import { useTheme } from "../ThemeContext"
 
-const Content = () => {
+const Content = ({blogs}) => {
   const darkTheme = useTheme()
 
   const themeStyles = {
@@ -15,7 +15,7 @@ const Content = () => {
   return (
     <div style={themeStyles}>
       <Header />
-      <Blogs className='flex flex-direction-col align-items-center ' />
+      <Blogs className='flex flex-direction-col align-items-center' blogs={blogs}/>
       <Footer />
     </div>
   )

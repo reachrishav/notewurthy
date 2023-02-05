@@ -149,3 +149,7 @@ footer {
 .home-link {
   color: inherit;
 }
+
+.blog-post {
+  height: 100vh;
+}
