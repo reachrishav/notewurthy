@@ -1,7 +1,21 @@
+import Header from "./Header"
+import Footer from "./Footer"
+import { useTheme } from "../ThemeContext"
+
 const NotFound = () => {
-    return (
-      <div>NotFound</div>
-    )
+  const darkTheme = useTheme()
+
+  const themeStyles = {
+    backgroundColor: darkTheme ? "#121212" : "#fff",
+    color: darkTheme ? "#fff" : "#121212",
   }
-  
-  export default NotFound
+  return (
+    <div class='full-vh' style={themeStyles}>
+      <Header />
+      <div>NotFound</div>
+      <Footer />
+    </div>
+  )
+}
+
+export default NotFound

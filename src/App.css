@@ -150,6 +150,10 @@ footer {
   color: inherit;
 }
 
-.blog-post {
+.full-vh {
   height: 100vh;
+}
+
+.mt-10n {
+  margin-top: -10px;
 }
