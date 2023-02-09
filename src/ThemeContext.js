@@ -17,6 +17,15 @@ export function ThemeProvider({ children }) {
 
     useEffect(() => {
         localStorage.setItem(DARKTHEME, darkTheme)
+        let darkClasses = Array.from(document.getElementsByClassName('black'))
+        if (darkTheme && darkClasses) {
+            darkClasses.forEach(element => element.classList.add('white'))
+
+        } else if (darkClasses) {
+            darkClasses.forEach(element => { 
+                element.classList.remove('white'); 
+            })
+        }
     }, [darkTheme])
 
     function toggleTheme() {
