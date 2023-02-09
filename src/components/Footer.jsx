@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className='light-text-color large-margin'>
+    <footer className='light-text-color'>
       <p>
         Made with ❤️ by{" "}
         <a

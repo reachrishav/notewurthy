@@ -7,7 +7,7 @@ const Header = () => {
 
   return (
     <>
-      <header className='flex space-evenly p-25 mt-10'>
+      <header className='flex space-evenly p-25'>
         <Link to='/' class='home-link'>
           <h2>
             note<span className='blue ml-2 cursive'>wurthy </span>
