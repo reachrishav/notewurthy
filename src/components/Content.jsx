@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import Header from "./Header"
 import Blogs from "./Blogs"
 import Footer from "./Footer"
@@ -12,6 +12,16 @@ const Content = ({blogs}) => {
     color: darkTheme ? "#fff" : "#121212",
     transition: "background-color .5s ease"
   }
+
+  useEffect(() => {
+    darkTheme
+      ? document
+          .querySelectorAll(".black")
+          .forEach(element => element.classList.add("white"))
+      : document
+          .querySelectorAll(".white")
+          .forEach(element => element.classList.remove("white"))
+  }, [darkTheme])
 
   return (
     <div style={themeStyles}>

@@ -10,6 +10,7 @@ const BlogPost = ({ blogs }) => {
   const themeStyles = {
     backgroundColor: darkTheme ? "#121212" : "#fff",
     color: darkTheme ? "#fff" : "#121212",
+    transition: "background-color .5s ease"
   }
 
   const { id } = useParams()
