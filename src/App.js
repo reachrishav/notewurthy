@@ -41,7 +41,7 @@ function App() {
     <ThemeProvider>
       <Routes>
         <Route path="/" element={<Content blogs={blogs} />} />
-        <Route path="/blog/:id" element={<BlogPost blogs={blogs} />} />
+        {/* <Route path="/blog/:id" element={<BlogPost blogs={blogs} />} /> */}
         <Route path="*" element={<NotFound />} />
       </Routes>
     </ThemeProvider>
