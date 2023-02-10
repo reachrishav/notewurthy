@@ -17,21 +17,8 @@ export function ThemeProvider({ children }) {
     localStorage.getItem(DARKTHEME) === "true"
   )
 
-  // useEffect(() => {
-  //     localStorage.setItem(DARKTHEME, darkTheme)
-  //     let darkClasses = Array.from(document.getElementsByClassName('black'))
-  //     if (darkTheme && darkClasses) {
-  //         darkClasses.forEach(element => element.classList.add('white'))
-
-  //     } else if (darkClasses) {
-  //         darkClasses.forEach(element => {
-  //             element.classList.remove('white');
-  //         })
-  //     }
-  // }, [darkTheme])
   useEffect(() => {
     localStorage.setItem(DARKTHEME, darkTheme)
-    console.log(darkTheme)
     darkTheme
       ? document
           .querySelectorAll(".black")

@@ -26,7 +26,7 @@ const Content = ({blogs}) => {
   return (
     <div style={themeStyles}>
       <Header />
-      <Blogs className='flex flex-direction-col align-items-center' blogs={blogs}/>
+      <Blogs className='ml-2-5em flex flex-direction-col' blogs={blogs}/>
       <Footer />
     </div>
   )
