@@ -1,10 +1,10 @@
-import { useParams } from "react-router-dom"
-import Header from "./Header"
-import Footer from "./Footer"
+// import { useParams } from "react-router-dom"
+// import Header from "./Header"
+// import Footer from "./Footer"
 import { useTheme } from "../ThemeContext"
 import NotFound from "./NotFound"
 
-const BlogPost = ({ blogs }) => {
+const BlogPost = ({ blogs, id }) => {
   const darkTheme = useTheme()
 
   const themeStyles = {
@@ -13,18 +13,17 @@ const BlogPost = ({ blogs }) => {
     transition: "background-color .5s ease"
   }
 
-  const { id } = useParams()
+  // const { id } = useParams()
   const filteredBlog = blogs.find((blog) => blog.id === parseInt(id))
   if(!filteredBlog){
     return <NotFound/>
   }
   return (
-    <div class='full-vh' style={themeStyles}>
-      <Header />
-      {filteredBlog.title}
+    <div style={themeStyles}>
+
+      <h1>{filteredBlog.title}</h1>
       <br />
       {filteredBlog.description}
-      <Footer />
     </div>
   )
 }

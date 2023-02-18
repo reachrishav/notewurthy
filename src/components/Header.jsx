@@ -7,7 +7,7 @@ const Header = () => {
 
   return (
     <>
-      <header className='grid p-25'>
+      <header className='header p-25'>
 
         <Link to='/' class='home-link'>
           <h2>
