@@ -34,8 +34,8 @@ const Content = ({ blogs }) => {
     <div style={themeStyles}>
       <Header />
       <div id='blog-section' className='grid'>
-        <Blogs className='ml-2-5em flex flex-direction-col' blogs={blogs} setSelectedId={setSelectedId}/>
-        <div>
+        <Blogs className='ml-2-5em flex flex-direction-col vertical-scroll blogs' blogs={blogs} setSelectedId={setSelectedId}/>
+        <div className='blog-post vertical-scroll'>
           <BlogPost blogs={blogs} id={selectedId} />
         </div>
       </div>

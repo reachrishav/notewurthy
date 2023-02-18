@@ -5,12 +5,14 @@
   font-family: "Roboto", sans-serif;
 }
 
-body {
+/* body {
   border-top: 5px solid #42b6f3;
-}
+} */
 
 #root {
+  border-top: 5px solid #42b6f3;
   height: 100vh;
+  overflow: hidden;
 }
 
 .align-items-center {
@@ -227,4 +229,18 @@ header {
   cursor: pointer;
   overflow: hidden;
   outline: none;
+}
+
+.vertical-scroll {
+  overflow-y: scroll;
+}
+
+.blogs {
+  height: 80vh;
+  padding-right: 2.5em;
+}
+
+.blog-post {
+  height: 80vh;
+  padding: 2.5em;
 }
