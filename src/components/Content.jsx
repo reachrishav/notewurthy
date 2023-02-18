@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 import Header from "./Header"
 import Blogs from "./Blogs"
 import Footer from "./Footer"
@@ -8,11 +8,17 @@ import BlogPost from './BlogPost'
 const Content = ({ blogs }) => {
   const darkTheme = useTheme()
 
+  const [selectedId, setSelectedId] = useState(1)
+
   const themeStyles = {
     backgroundColor: darkTheme ? "#121212" : "#fff",
     color: darkTheme ? "#fff" : "#121212",
     transition: "background-color .5s ease"
   }
+
+  useEffect(() => {
+    setSelectedId(selectedId)
+  }, [selectedId])
 
   useEffect(() => {
     darkTheme
@@ -28,9 +34,9 @@ const Content = ({ blogs }) => {
     <div style={themeStyles}>
       <Header />
       <div id='blog-section' className='grid'>
-        <Blogs className='ml-2-5em flex flex-direction-col' blogs={blogs} />
+        <Blogs className='ml-2-5em flex flex-direction-col' blogs={blogs} setSelectedId={setSelectedId}/>
         <div>
-          <BlogPost blogs={blogs} id={1} />
+          <BlogPost blogs={blogs} id={selectedId} />
         </div>
       </div>
       <Footer />

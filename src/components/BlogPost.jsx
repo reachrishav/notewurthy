@@ -20,7 +20,7 @@ const BlogPost = ({ blogs, id }) => {
   }
   return (
     <div style={themeStyles}>
-      
+
       <h1>{filteredBlog.title}</h1>
       <br />
       {filteredBlog.description}

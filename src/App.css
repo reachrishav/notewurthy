@@ -170,7 +170,8 @@ footer>p {
   color: white;
 }
 
-.grid, .header {
+.grid,
+.header {
   display: grid;
 }
 
@@ -217,4 +218,13 @@ header {
 
 .align-self-end {
   align-self: start
+}
+
+.blog-link {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
 }

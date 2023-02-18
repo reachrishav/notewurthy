@@ -2,7 +2,7 @@ import "./App.css"
 import Content from "./components/Content"
 import { ThemeProvider } from "./ThemeContext"
 import { Routes, Route } from "react-router-dom"
-import BlogPost from "./components/BlogPost"
+// import BlogPost from "./components/BlogPost"
 import NotFound from "./components/NotFound"
 import { useEffect, useState } from "react"
 
