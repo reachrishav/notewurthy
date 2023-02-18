@@ -1,6 +1,3 @@
-// import { useParams } from "react-router-dom"
-// import Header from "./Header"
-// import Footer from "./Footer"
 import { useTheme } from "../ThemeContext"
 import NotFound from "./NotFound"
 
@@ -8,12 +5,11 @@ const BlogPost = ({ blogs, id }) => {
   const darkTheme = useTheme()
 
   const themeStyles = {
-    backgroundColor: darkTheme ? "#121212" : "#fff",
-    color: darkTheme ? "#fff" : "#121212",
+    backgroundColor: darkTheme ? "#23272f" : "#fff",
+    color: darkTheme ? "#fff" : "#23272f",
     transition: "background-color .5s ease"
   }
 
-  // const { id } = useParams()
   const filteredBlog = blogs.find((blog) => blog.id === parseInt(id))
   if(!filteredBlog){
     return <NotFound/>

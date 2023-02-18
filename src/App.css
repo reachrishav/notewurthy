@@ -95,7 +95,7 @@
   font-size: 13px;
 }
 
-.custom-button {
+.btn-read-more {
   display: inline-block;
   font-weight: 500;
   padding: 0 20px;
@@ -105,19 +105,19 @@
   font-size: 13px;
 }
 
-.light-btn {
+.btn-light {
   color: #a5a5a5;
   border: 1px solid #e2e2e2;
   background-color: white;
 }
 
-.dark-btn {
+.btn-dark {
   color: #42b6f3;
   border: 1px solid #42b6f3;
   background-color: transparent;
 }
 
-.custom-button:hover {
+.btn-read-more:hover {
   border-color: #2b98d3;
   color: #2b98d3;
   transition: all 0.2s ease;

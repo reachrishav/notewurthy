@@ -6,8 +6,8 @@ const NotFound = () => {
   const darkTheme = useTheme()
 
   const themeStyles = {
-    backgroundColor: darkTheme ? "#121212" : "#fff",
-    color: darkTheme ? "#fff" : "#121212",
+    backgroundColor: darkTheme ? "#23272f" : "#fff",
+    color: darkTheme ? "#fff" : "#23272f",
   }
   return (
     <div class='full-vh' style={themeStyles}>

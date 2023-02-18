@@ -17,7 +17,7 @@ const Blog = ({ blog, setSelectedId }) => {
       <div className='light-font-weight light-text-color'>
         {blog.description.split(' ').slice(0, 50).join(' ') + '...'}
       </div>
-      <button onClick={() => setSelectedId(blog.id)} className='custom-button dark-btn'>Read More</button>
+      <button onClick={() => setSelectedId(blog.id)} className='btn-read-more btn-light'>Read More</button>
     </div>
   )
 }
