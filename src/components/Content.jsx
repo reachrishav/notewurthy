@@ -4,6 +4,7 @@ import Blogs from './Blogs';
 import Footer from './Footer';
 import { useTheme } from '../ThemeContext';
 import BlogPost from './BlogPost';
+import ResizePanel from 'react-resize-panel';
 
 const Content = ({ blogs }) => {
 	const darkTheme = useTheme();
@@ -41,12 +42,16 @@ const Content = ({ blogs }) => {
 	return (
 		<div style={themeStyles}>
 			<Header />
-			<div id="blog-section" className="grid">
-				<Blogs
-					className="ml-2-5em flex flex-direction-col vertical-scroll blogs"
-					blogs={blogs}
-					setSelectedId={setSelectedId}
-				/>
+			<div id="blog-section" className="flex">
+				<div className="all-blogs">
+					<ResizePanel direction="e" handleClass="custom-handle">
+						<Blogs
+							className="ml-2-5em flex flex-direction-col vertical-scroll blogs"
+							blogs={blogs}
+							setSelectedId={setSelectedId}
+						/>
+					</ResizePanel>
+				</div>
 				<div className="blog-post vertical-scroll">
 					<BlogPost blogs={blogs} id={selectedId} />
 				</div>
