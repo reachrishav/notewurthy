@@ -28,6 +28,14 @@ const Content = ({ blogs }) => {
       : document
         .querySelectorAll(".white")
         .forEach(element => element.classList.remove("white"))
+    
+    darkTheme
+      ? document
+        .querySelectorAll('.dark-btn')
+        .forEach(element => element.classList.add('light-btn'))
+      : document
+        .querySelectorAll('.light-btn')
+        .forEach(element => element.classList.remove('light-btn'))
   }, [darkTheme])
 
   return (

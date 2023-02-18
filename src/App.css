@@ -98,14 +98,23 @@
 .custom-button {
   display: inline-block;
   font-weight: 500;
-  color: #a5a5a5;
   padding: 0 20px;
   border-radius: 18px;
   height: 36px;
   line-height: 36px;
-  border: 1px solid #e2e2e2;
   font-size: 13px;
+}
+
+.light-btn {
+  color: #a5a5a5;
+  border: 1px solid #e2e2e2;
   background-color: white;
+}
+
+.dark-btn {
+  color: #42b6f3;
+  border: 1px solid #42b6f3;
+  background-color: transparent;
 }
 
 .custom-button:hover {

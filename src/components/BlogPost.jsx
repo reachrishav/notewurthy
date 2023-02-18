@@ -23,7 +23,7 @@ const BlogPost = ({ blogs, id }) => {
 
       <h1>{filteredBlog.title}</h1>
       <br />
-      {filteredBlog.description}
+      <p className="light-font-weight">{filteredBlog.description}</p>
     </div>
   )
 }
