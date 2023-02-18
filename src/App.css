@@ -244,6 +244,7 @@ header {
 
 .vertical-scroll {
 	overflow-y: scroll;
+	scrollbar-width: thin;
 }
 
 .blogs {
