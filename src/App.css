@@ -299,3 +299,11 @@ header {
 .page-content {
 	height: 85%;
 }
+.xcircle-icon {
+	display: none;
+}
+
+.blog-post:hover .xcircle-icon,
+.blog-post:focus .xcircle-icon {
+	display: inline-block;
+}

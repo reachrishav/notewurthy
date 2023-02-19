@@ -50,7 +50,7 @@ const Content = ({ blogs }) => {
 						setSelectedId={setSelectedId}
 					/>
 				</div>
-				<div className="blog-post ">
+				<div className="blog-post">
 					<BlogPost blogs={blogs} id={selectedId} />
 				</div>
 			</Split>

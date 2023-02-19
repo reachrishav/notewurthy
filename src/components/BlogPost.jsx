@@ -18,7 +18,7 @@ const BlogPost = ({ blogs, id }) => {
 		<div style={themeStyles}>
 			<div className="blog-post-header flex">
 				<h1>{filteredBlog.title}</h1>
-				<i className="fa-duotone fa-circle-xmark"></i>
+				<i className="fa-duotone fa-circle-xmark xcircle-icon"></i>
 			</div>
 			<br />
 			<p className="light-font-weight">{filteredBlog.description}</p>
