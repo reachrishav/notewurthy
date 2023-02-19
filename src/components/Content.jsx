@@ -1,25 +1,25 @@
-import React, { useEffect, useState } from 'react';
-import Header from './Header';
-import Blogs from './Blogs';
-import Footer from './Footer';
-import { useTheme } from '../ThemeContext';
-import BlogPost from './BlogPost';
-import ResizePanel from 'react-resize-panel';
+import React, { useEffect, useState } from 'react'
+import Header from './Header'
+import Blogs from './Blogs'
+import Footer from './Footer'
+import { useTheme } from '../ThemeContext'
+import BlogPost from './BlogPost'
+import Split from 'react-split'
 
 const Content = ({ blogs }) => {
-	const darkTheme = useTheme();
+	const darkTheme = useTheme()
 
-	const [selectedId, setSelectedId] = useState(1);
+	const [selectedId, setSelectedId] = useState(1)
 
 	const themeStyles = {
 		backgroundColor: darkTheme ? '#23272f' : '#fff',
 		color: darkTheme ? '#fff' : '#23272f',
 		transition: 'background-color .5s ease',
-	};
+	}
 
 	useEffect(() => {
-		setSelectedId(selectedId);
-	}, [selectedId]);
+		setSelectedId(selectedId)
+	}, [selectedId])
 
 	useEffect(() => {
 		darkTheme
@@ -28,7 +28,7 @@ const Content = ({ blogs }) => {
 					.forEach((element) => element.classList.add('white'))
 			: document
 					.querySelectorAll('.white')
-					.forEach((element) => element.classList.remove('white'));
+					.forEach((element) => element.classList.remove('white'))
 
 		darkTheme
 			? document
@@ -36,29 +36,27 @@ const Content = ({ blogs }) => {
 					.forEach((element) => element.classList.add('btn-dark'))
 			: document
 					.querySelectorAll('.btn-dark')
-					.forEach((element) => element.classList.remove('btn-dark'));
-	}, [darkTheme]);
+					.forEach((element) => element.classList.remove('btn-dark'))
+	}, [darkTheme])
 
 	return (
 		<div style={themeStyles}>
 			<Header />
-			<div id="blog-section" className="flex">
+			<Split sizes={[40, 60]} className="flex">
 				<div className="all-blogs">
-					<ResizePanel direction="e" handleClass="custom-handle">
-						<Blogs
-							className="ml-2-5em flex flex-direction-col vertical-scroll blogs"
-							blogs={blogs}
-							setSelectedId={setSelectedId}
-						/>
-					</ResizePanel>
+					<Blogs
+						className="ml-2-5em flex flex-direction-col vertical-scroll blogs"
+						blogs={blogs}
+						setSelectedId={setSelectedId}
+					/>
 				</div>
 				<div className="blog-post vertical-scroll">
 					<BlogPost blogs={blogs} id={selectedId} />
 				</div>
-			</div>
+			</Split>
 			<Footer />
 		</div>
-	);
-};
+	)
+}
 
-export default Content;
+export default Content
