@@ -43,14 +43,14 @@ const Content = ({ blogs }) => {
 		<div style={themeStyles}>
 			<Header />
 			<Split sizes={[40, 60]} className="flex">
-				<div className="all-blogs">
+				<div className="all-blogs vertical-scroll">
 					<Blogs
-						className="ml-2-5em flex flex-direction-col vertical-scroll blogs"
+						className="ml-2-5em flex flex-direction-col blogs blog-content"
 						blogs={blogs}
 						setSelectedId={setSelectedId}
 					/>
 				</div>
-				<div className="blog-post vertical-scroll">
+				<div className="blog-post ">
 					<BlogPost blogs={blogs} id={selectedId} />
 				</div>
 			</Split>
