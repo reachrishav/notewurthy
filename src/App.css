@@ -145,10 +145,11 @@ footer a {
 
 footer {
 	font-size: 0.85em;
+	height: 5%;
 }
 
 footer > p {
-	padding: 30px;
+	padding: 15px 0 10px 30px;
 }
 
 .cursive {
@@ -187,6 +188,7 @@ footer > p {
 
 header {
 	grid-template-columns: 1fr 1fr;
+	height: 8%;
 }
 
 .justify-content-end {
@@ -288,4 +290,12 @@ header {
 .blog-post-header {
 	align-items: center;
 	justify-content: space-between;
+}
+
+.content {
+	flex-direction: column;
+	height: 100vh;
+}
+.page-content {
+	height: 85%;
 }

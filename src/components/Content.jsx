@@ -40,9 +40,9 @@ const Content = ({ blogs }) => {
 	}, [darkTheme])
 
 	return (
-		<div style={themeStyles}>
+		<div className="content flex" style={themeStyles}>
 			<Header />
-			<Split sizes={[40, 60]} className="flex">
+			<Split sizes={[40, 60]} className="flex page-content">
 				<div className="all-blogs vertical-scroll">
 					<Blogs
 						className="ml-2-5em flex flex-direction-col blogs blog-content"
