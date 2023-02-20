@@ -248,6 +248,10 @@ header {
 	overflow-y: auto;
 	visibility: hidden;
 }
+.vertical-scroll-blog-post {
+	scrollbar-width: thin;
+	overflow-y: auto;
+}
 .blog-content,
 .vertical-scroll:hover,
 .vertical-scroll:focus {
