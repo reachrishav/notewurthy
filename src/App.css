@@ -326,3 +326,17 @@ header {
 	border-radius: 20px;
 	border: transparent;
 }
+
+.slide-in-right {
+	transform: translateX(100%);
+	animation: slide-in-right 0.2s forwards;
+}
+
+@keyframes slide-in-right {
+	from {
+		transform: translateX(100%);
+	}
+	to {
+		transform: translateX(0);
+	}
+}

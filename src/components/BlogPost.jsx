@@ -1,11 +1,16 @@
 import { useTheme } from '../ThemeContext'
 import NotFound from './NotFound'
+import { useState, useEffect } from 'react'
 
 const BlogPost = ({ blogs, id, setSelectedId }) => {
 	const darkTheme = useTheme()
+	const [isVisible, setIsVisible] = useState(false)
+	useEffect(() => {
+		setIsVisible(true)
+	}, [])
 
 	const themeStyles = {
-		backgroundColor: darkTheme ? '#23272f' : '#fff',
+		backgroundColor: darkTheme ? '#24f' : '#fff',
 		color: darkTheme ? '#fff' : '#23272f',
 		transition: 'background-color .5s ease',
 	}
@@ -15,7 +20,7 @@ const BlogPost = ({ blogs, id, setSelectedId }) => {
 		return <NotFound />
 	}
 	return (
-		<div style={themeStyles}>
+		<div style={themeStyles} className={`${isVisible ? 'slide-in-right' : ''}`}>
 			<div className="blog-post-header flex">
 				<h1>{filteredBlog.title}</h1>
 				<i
