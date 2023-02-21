@@ -1,7 +1,7 @@
 import { useTheme } from '../ThemeContext'
 import NotFound from './NotFound'
 
-const BlogPost = ({ blogs, id }) => {
+const BlogPost = ({ blogs, id, setSelectedId }) => {
 	const darkTheme = useTheme()
 
 	const themeStyles = {

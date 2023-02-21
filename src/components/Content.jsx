@@ -5,11 +5,12 @@ import Footer from './Footer'
 import { useTheme } from '../ThemeContext'
 import BlogPost from './BlogPost'
 import Split from 'react-split'
+import WelcomePost from './WelcomePost'
 
 const Content = ({ blogs }) => {
 	const darkTheme = useTheme()
 
-	const [selectedId, setSelectedId] = useState(1)
+	const [selectedId, setSelectedId] = useState(-1)
 
 	const themeStyles = {
 		backgroundColor: darkTheme ? '#23272f' : '#fff',
@@ -24,19 +25,19 @@ const Content = ({ blogs }) => {
 	useEffect(() => {
 		darkTheme
 			? document
-					.querySelectorAll('.black')
-					.forEach((element) => element.classList.add('white'))
+				.querySelectorAll('.black')
+				.forEach((element) => element.classList.add('white'))
 			: document
-					.querySelectorAll('.white')
-					.forEach((element) => element.classList.remove('white'))
+				.querySelectorAll('.white')
+				.forEach((element) => element.classList.remove('white'))
 
 		darkTheme
 			? document
-					.querySelectorAll('.btn-light')
-					.forEach((element) => element.classList.add('btn-dark'))
+				.querySelectorAll('.btn-light')
+				.forEach((element) => element.classList.add('btn-dark'))
 			: document
-					.querySelectorAll('.btn-dark')
-					.forEach((element) => element.classList.remove('btn-dark'))
+				.querySelectorAll('.btn-dark')
+				.forEach((element) => element.classList.remove('btn-dark'))
 	}, [darkTheme])
 
 	return (
@@ -51,7 +52,12 @@ const Content = ({ blogs }) => {
 					/>
 				</div>
 				<div className="blog-post vertical-scroll-blog-post">
-					<BlogPost blogs={blogs} id={selectedId} />
+					{(selectedId === -1) ? 
+						<WelcomePost /> : 
+						<BlogPost 
+							blogs={blogs} 
+							id={selectedId} 
+						/>}
 				</div>
 			</Split>
 			<Footer />
