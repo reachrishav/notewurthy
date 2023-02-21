@@ -18,7 +18,10 @@ const BlogPost = ({ blogs, id, setSelectedId }) => {
 		<div style={themeStyles}>
 			<div className="blog-post-header flex">
 				<h1>{filteredBlog.title}</h1>
-				<i className="fa-duotone fa-circle-xmark xcircle-icon fa-lg"></i>
+				<i
+					className="fa-duotone fa-circle-xmark xcircle-icon fa-lg"
+					onClick={() => setSelectedId(-1)}
+				></i>
 			</div>
 			<br />
 			<p className="light-font-weight">{filteredBlog.description}</p>
