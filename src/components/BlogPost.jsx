@@ -10,7 +10,7 @@ const BlogPost = ({ blogs, id, setSelectedId }) => {
 	}, [])
 
 	const themeStyles = {
-		backgroundColor: darkTheme ? '#24f' : '#fff',
+		backgroundColor: darkTheme ? '#23272f' : '#fff',
 		color: darkTheme ? '#fff' : '#23272f',
 		transition: 'background-color .5s ease',
 	}
