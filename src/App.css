@@ -245,11 +245,13 @@ header {
 
 .vertical-scroll {
 	scrollbar-width: thin;
+	scrollbar-color: rgba(155, 155, 155, 0.5) transparent;
 	overflow-y: auto;
 	visibility: hidden;
 }
 .vertical-scroll-blog-post {
 	scrollbar-width: thin;
+	scrollbar-color: rgba(155, 155, 155, 0.5) transparent;
 	overflow-y: auto;
 }
 .blog-content,
@@ -272,10 +274,6 @@ header {
 
 .all-blogs {
 	min-width: 30%;
-}
-
-.custom-handle {
-	display: none;
 }
 
 .gutter {
@@ -310,4 +308,16 @@ header {
 .blog-post:hover .xcircle-icon,
 .blog-post:focus .xcircle-icon {
 	display: inline-block;
+}
+
+::-webkit-scrollbar {
+	width: 9px;
+}
+::-webkit-scrollbar-track {
+	background: transparent;
+}
+::-webkit-scrollbar-thumb {
+	background-color: rgba(155, 155, 155, 0.5);
+	border-radius: 20px;
+	border: transparent;
 }
