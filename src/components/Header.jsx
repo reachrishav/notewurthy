@@ -2,14 +2,14 @@ import { useTheme, useThemeUpdate } from '../ThemeContext'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 
-const Header = () => {
+const Header = ({ setSelectedId }) => {
 	const toggleTheme = useThemeUpdate()
 	const darkTheme = useTheme()
 
 	return (
 		<>
 			<header className="header p-5">
-				<Link to="/" class="home-link">
+				<Link to="/" class="home-link" onClick={() => setSelectedId(-1)}>
 					<h2>
 						<span className="mr-1 cursive">note</span>
 						<span className="blue ml-2 cursive">wurthy </span>

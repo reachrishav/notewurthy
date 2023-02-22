@@ -42,7 +42,7 @@ const Content = ({ blogs }) => {
 
 	return (
 		<div className="content flex" style={themeStyles}>
-			<Header />
+			<Header setSelectedId={setSelectedId} />
 			<Split sizes={[40, 60]} className="flex page-content">
 				<div className="all-blogs vertical-scroll">
 					<Blogs
