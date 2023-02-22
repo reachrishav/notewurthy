@@ -28,7 +28,6 @@ const BlogPost = ({ blogs, id, setSelectedId }) => {
 					className="fa-duotone fa-circle-xmark xcircle-icon fa-lg"
 					onClick={() => {
 						setSelectedId(-1)
-						console.log('setting to false')
 						setIsVisible(false)
 					}}
 				></i>
