@@ -340,3 +340,17 @@ header {
 		transform: translateX(0);
 	}
 }
+
+.slide-in-left {
+	transform: translateX(-100%);
+	animation: slide-in-left 0.2s forwards;
+}
+
+@keyframes slide-in-left {
+	from {
+		transform: translateX(-100%);
+	}
+	to {
+		transform: translateX(0);
+	}
+}

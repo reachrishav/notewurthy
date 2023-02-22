@@ -4,10 +4,11 @@ import { useState, useEffect } from 'react'
 
 const BlogPost = ({ blogs, id, setSelectedId }) => {
 	const darkTheme = useTheme()
-	const [isVisible, setIsVisible] = useState(false)
-	useEffect(() => {
-		setIsVisible(true)
-	}, [])
+	const [isVisible, setIsVisible] = useState(true)
+	
+	// useEffect(() => {
+	// 	setIsVisible((v) => !v)
+	// }, [])
 
 	const themeStyles = {
 		backgroundColor: darkTheme ? '#23272f' : '#fff',
@@ -25,7 +26,11 @@ const BlogPost = ({ blogs, id, setSelectedId }) => {
 				<h1>{filteredBlog.title}</h1>
 				<i
 					className="fa-duotone fa-circle-xmark xcircle-icon fa-lg"
-					onClick={() => setSelectedId(-1)}
+					onClick={() => {
+						setSelectedId(-1)
+						console.log('setting to false')
+						setIsVisible(false)
+					}}
 				></i>
 			</div>
 			<br />
