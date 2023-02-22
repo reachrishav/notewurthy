@@ -9,10 +9,10 @@ function WelcomePost() {
 			>
 				<img
 					src={WelcomeIllustration}
-					alt="WelcomeIllustration"
+					alt=""
 					className="welcome-illustration"
 				/>
-				<h3>Hey there! Welcome 🙂</h3>
+				<h2>Hey there! Welcome 🙂</h2>
 			</div>
 		</>
 	)
