@@ -1,12 +1,14 @@
 function WelcomePost() {
-    return (
-        <>
-            <div className='flex align-items-center justify-content-center slide-in-left' 
-                style={{ height: '100%' }}>
-                <h1>Welcome to my Blog 😍</h1>
-            </div>
-        </>
-    )
+	return (
+		<>
+			<div
+				className="flex align-items-center justify-content-center"
+				style={{ height: '100%' }}
+			>
+				<h2>Welcome to my Blog 😍</h2>
+			</div>
+		</>
+	)
 }
 
 export default WelcomePost

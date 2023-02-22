@@ -326,7 +326,7 @@ header {
 	border-radius: 20px;
 	border: transparent;
 }
-
+/*
 .slide-in-right {
 	transform: translateX(100%);
 	animation: slide-in-right 0.2s forwards;
@@ -353,4 +353,8 @@ header {
 	to {
 		transform: translateX(0);
 	}
+} */
+.blog-post-container {
+	padding: 0.8rem 1.5rem 0.8rem 1.2rem;
+	border-radius: 8px;
 }
