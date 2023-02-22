@@ -1,14 +1,24 @@
 import { useTheme } from '../ThemeContext'
 import NotFound from './NotFound'
 import { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
+import { motion, useAnimation, useCycle, AnimatePresence } from 'framer-motion'
 
 const BlogPost = ({ blogs, id, setSelectedId }) => {
 	const darkTheme = useTheme()
 	const [isVisible, setIsVisible] = useState(true)
+	const [animationState, cycleAnimation] = useCycle(
+		'initialState',
+		'targetState'
+	)
+	const controls = useAnimation()
+
+	const handleClick = async () => {
+		await controls.start(animationState)
+		cycleAnimation()
+	}
 
 	const themeStyles = {
-		backgroundColor: darkTheme ? '#343a46' : '#fff',
+		backgroundColor: darkTheme ? '#343a46' : '#ECF2FF',
 		color: darkTheme ? '#ebecf0' : '#23272f',
 		transition: 'background-color .5s ease',
 	}
@@ -18,24 +28,40 @@ const BlogPost = ({ blogs, id, setSelectedId }) => {
 		return <NotFound />
 	}
 	return (
-		<div style={themeStyles} className="blog-post-container">
-			<div className='blog-post-inner-container'>
-				<div className="blog-post-header flex">
-					<h1>{filteredBlog.title}</h1>
-					<motion.i
-						className="fa-duotone fa-circle-xmark xcircle-icon fa-lg"
-						onClick={() => {
-							setSelectedId(-1)
-							setIsVisible(false)
-						}}
-						whileHover={{ scale: 1.2 }}
-						whileTap={{ scale: 0.8 }}
-					></motion.i>
+		<AnimatePresence>
+			<motion.div
+				style={themeStyles}
+				className="blog-post-container"
+				initial={{ opacity: 0, x: '150vw' }}
+				animate={{ opacity: 1, x: 0 }}
+				transition={{ duration: 0.4 }}
+				key={id}
+				// animate={controls}
+				// variants={{
+				// 	initialState: { x: 0 },
+				// 	targetState: { opacity: 0 },
+				// }}
+				// transition={{ duration: 0.2 }}
+			>
+				<div className="blog-post-inner-container">
+					<div className="blog-post-header flex">
+						<h1>{filteredBlog.title}</h1>
+						<motion.i
+							className="fa-duotone fa-circle-xmark xcircle-icon fa-lg"
+							onClick={() => {
+								setSelectedId(-1)
+								setIsVisible(false)
+							}}
+							// onClick={handleClick}
+							whileHover={{ scale: 1.1 }}
+							whileTap={{ scale: 0.9 }}
+						></motion.i>
+					</div>
+					<br />
+					<p className="light-font-weight">{filteredBlog.description}</p>
 				</div>
-				<br />
-				<p className="light-font-weight">{filteredBlog.description}</p>
-			</div>
-		</div>
+			</motion.div>
+		</AnimatePresence>
 	)
 }
 

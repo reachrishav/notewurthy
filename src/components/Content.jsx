@@ -13,8 +13,8 @@ const Content = ({ blogs }) => {
 	const [selectedId, setSelectedId] = useState(-1)
 
 	const themeStyles = {
-		backgroundColor: darkTheme ? '#23272f' : '#fff',
-		color: darkTheme ? '#fff' : '#23272f',
+		backgroundColor: darkTheme ? '#23272f' : '#ECF2FF',
+		color: darkTheme ? '#ECF2FF' : '#23272f',
 		transition: 'background-color .5s ease',
 	}
 
@@ -51,7 +51,7 @@ const Content = ({ blogs }) => {
 						setSelectedId={setSelectedId}
 					/>
 				</div>
-				<div className="blog-post vertical-scroll-blog-post">
+				<div className="blog-post">
 					{selectedId === -1 ? (
 						<WelcomePost />
 					) : (

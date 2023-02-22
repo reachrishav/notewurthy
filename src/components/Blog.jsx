@@ -1,4 +1,4 @@
-// import { Link } from "react-router-dom"
+import { motion } from 'framer-motion'
 
 const Blog = ({ blog, setSelectedId }) => {
 	return (
@@ -11,18 +11,20 @@ const Blog = ({ blog, setSelectedId }) => {
 					onClick={() => setSelectedId(blog.id)}
 					className="no-txt-decor black blue-on-hover blog-link"
 				>
-					<h1 className="medium-font-weight">{blog.title}</h1>
+					<h2 className="medium-font-weight">{blog.title}</h2>
 				</button>
 			</div>
 			<div className="light-font-weight light-text-color">
 				{blog.description.split(' ').slice(0, 50).join(' ') + '...'}
 			</div>
-			<button
+			<motion.button
 				onClick={() => setSelectedId(blog.id)}
 				className="btn-read-more btn-light"
+				whileHover={{ scale: 1.05 }}
+				whileTap={{ scale: 0.95 }}
 			>
 				Read More
-			</button>
+			</motion.button>
 		</div>
 	)
 }

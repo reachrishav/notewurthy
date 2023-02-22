@@ -80,7 +80,7 @@
 	color: #818181;
 }
 
-.blog>div {
+.blog > div {
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
@@ -111,8 +111,8 @@
 
 .btn-light {
 	color: #a5a5a5;
-	border: 1px solid #e2e2e2;
-	background-color: white;
+	border: 1px solid #b9b9b9;
+	background-color: #ecf2ff;
 }
 
 .btn-dark {
@@ -153,7 +153,7 @@ footer {
 	height: 5%;
 }
 
-footer>p {
+footer > p {
 	padding: 15px 0 10px 30px;
 }
 
@@ -179,7 +179,7 @@ footer>p {
 }
 
 .fa-sun {
-	color: white;
+	color: #ecf2ff;
 }
 
 .white {
@@ -200,12 +200,12 @@ header {
 	justify-content: flex-end;
 }
 
-.header>div:nth-child(2) {
+.header > div:nth-child(2) {
 	justify-self: end;
 	align-self: center;
 }
 
-.header>div:nth-child(2)>p:nth-child(1) {
+.header > div:nth-child(2) > p:nth-child(1) {
 	display: inline-block;
 }
 
@@ -213,7 +213,7 @@ header {
 	margin-right: 2.5em;
 }
 
-.header>div:nth-child(2)>p:nth-child(1) {
+.header > div:nth-child(2) > p:nth-child(1) {
 	margin-right: 1.5em;
 }
 
@@ -346,4 +346,15 @@ header {
 	height: 100%;
 	scrollbar-width: thin;
 	scrollbar-color: rgba(155, 155, 155, 0.5) transparent;
+	white-space: pre-wrap;
+}
+
+.welcome-illustration {
+	height: 200px;
+	width: 200px;
+}
+
+.not-found-illustration {
+	height: 350px;
+	width: 350px;
 }
