@@ -342,13 +342,15 @@ header {
 
 .blog-post-inner-container {
 	padding: 0 1.5rem 0 1.5rem;
-	overflow-y: auto;
+	overflow-y: hidden;
 	height: 100%;
 	scrollbar-width: thin;
 	scrollbar-color: rgba(155, 155, 155, 0.5) transparent;
 	white-space: pre-wrap;
 }
-
+.blog-post-inner-container:hover {
+	overflow-y: auto;
+}
 .welcome-illustration {
 	height: 200px;
 	width: 200px;

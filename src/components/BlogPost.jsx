@@ -21,6 +21,7 @@ const BlogPost = ({ blogs, id, setSelectedId }) => {
 		backgroundColor: darkTheme ? '#343a46' : '#ECF2FF',
 		color: darkTheme ? '#ebecf0' : '#23272f',
 		transition: 'background-color .5s ease',
+		boxShadow: '0 1px 7px 0 rgba(0,0,0,.6)',
 	}
 
 	const filteredBlog = blogs.find((blog) => blog.id === parseInt(id))
