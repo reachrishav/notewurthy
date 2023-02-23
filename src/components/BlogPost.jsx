@@ -32,7 +32,7 @@ const BlogPost = ({ blogs, id, setSelectedId }) => {
 		<AnimatePresence>
 			<motion.div
 				style={themeStyles}
-				className="blog-post-container"
+				className="blog-post-container  blog-post-font"
 				initial={{ opacity: 0, x: '150vw' }}
 				animate={{ opacity: 1, x: 0 }}
 				transition={{ duration: 0.4 }}
@@ -46,7 +46,7 @@ const BlogPost = ({ blogs, id, setSelectedId }) => {
 			>
 				<div className="blog-post-inner-container">
 					<div className="blog-post-header flex">
-						<h1>{filteredBlog.title}</h1>
+						<h1 className="blog-post-font">{filteredBlog.title}</h1>
 						<motion.i
 							className="fa-duotone fa-circle-xmark xcircle-icon fa-lg"
 							onClick={() => {
@@ -59,7 +59,9 @@ const BlogPost = ({ blogs, id, setSelectedId }) => {
 						></motion.i>
 					</div>
 					<br />
-					<p className="light-font-weight">{filteredBlog.description}</p>
+					<p className="light-font-weight blog-post-font">
+						{filteredBlog.description}
+					</p>
 				</div>
 			</motion.div>
 		</AnimatePresence>

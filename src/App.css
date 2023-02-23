@@ -248,23 +248,23 @@ header {
 	outline: none;
 }
 
-.vertical-scroll {
+/* .vertical-scroll {
 	scrollbar-width: thin;
 	scrollbar-color: rgba(155, 155, 155, 0.5) transparent;
-	overflow-y: auto;
+	overflow-y: hidden;
 	visibility: hidden;
-}
+} */
 
 /* .vertical-scroll-blog-post {
 	scrollbar-width: thin;
 	scrollbar-color: rgba(155, 155, 155, 0.5) transparent;
 	overflow-y: auto;
 } */
-.blog-content,
+/* .blog-content,
 .vertical-scroll:hover,
 .vertical-scroll:focus {
 	visibility: visible;
-}
+} */
 
 .blogs {
 	height: 85vh;
@@ -344,13 +344,22 @@ header {
 	padding: 0 1.5rem 0 1.5rem;
 	overflow-y: hidden;
 	height: 100%;
-	scrollbar-width: thin;
+	scrollbar-width: none;
 	scrollbar-color: rgba(155, 155, 155, 0.5) transparent;
 	white-space: pre-wrap;
+}
+.blog-post-font {
+	font-family: 'Vollkorn', serif;
 }
 .blog-post-inner-container:hover {
 	overflow-y: auto;
 }
+
+.blog-post-inner-container::-webkit-scrollbar {
+	width: 0;
+	height: 0;
+}
+
 .welcome-illustration {
 	height: 300px;
 	width: 300px;
@@ -359,4 +368,30 @@ header {
 .not-found-illustration {
 	height: 350px;
 	width: 350px;
+}
+
+/* .pagination-list {
+	justify-content: space-evenly;
+} */
+
+.pagination {
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 10rem;
+	font-size: 1.2rem;
+	gap: 5px;
+}
+
+.pagination .page-num {
+	padding: 6px 12px;
+	cursor: pointer;
+	border-radius: 6px;
+	font-weight: 400;
+	background-color: #818181;
+}
+
+.pagination .page-num-active {
+	background-color: #2b98d3f5;
 }
