@@ -11,7 +11,7 @@ import { motion } from 'framer-motion'
 
 const Content = ({ blogs }) => {
 	const darkTheme = useTheme()
-	const itemsPerPage = 2
+	const itemsPerPage = 3
 
 	const [selectedId, setSelectedId] = useState(-1)
 
@@ -72,7 +72,7 @@ const Content = ({ blogs }) => {
 			<Split sizes={[40, 60]} className="flex page-content">
 				<div className="all-blogs flex space-between flex-direction-col">
 					<Blogs
-						className="ml-2-5em flex flex-direction-col blogs blog-content vertical-scroll"
+						className="ml-1-5em flex flex-direction-col blogs blog-content vertical-scroll"
 						blogs={currentBlogs}
 						setSelectedId={setSelectedId}
 					/>
@@ -80,6 +80,7 @@ const Content = ({ blogs }) => {
 						initial={{ opacity: 0 }}
 						animate={{ opacity: 1, x: 10 }}
 						exit={{ opacity: 0 }}
+						style={{ marginTop: '1rem' }}
 					>
 						<ReactPaginate
 							breakLabel="..."

@@ -15,7 +15,7 @@ const Blog = ({ blog, setSelectedId }) => {
 				</button>
 			</div>
 			<div className="light-font-weight light-text-color">
-				{blog.description.split(' ').slice(0, 50).join(' ') + '...'}
+				{blog.description.split(' ').slice(0, 25).join(' ') + '...'}
 			</div>
 			<motion.button
 				onClick={() => setSelectedId(blog.id)}
