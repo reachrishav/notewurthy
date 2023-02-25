@@ -398,6 +398,7 @@ header {
 	border-radius: 4px;
 	font-weight: 400;
 	background-color: #343a46e9;
+	transition: all 0.3s ease-in;
 }
 
 .pagination .page-num-active {

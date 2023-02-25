@@ -7,7 +7,6 @@ import BlogPost from './BlogPost'
 import Split from 'react-split'
 import WelcomePost from './WelcomePost'
 import ReactPaginate from 'react-paginate'
-import { motion } from 'framer-motion'
 
 const Content = ({ blogs }) => {
 	const darkTheme = useTheme()
@@ -29,18 +28,18 @@ const Content = ({ blogs }) => {
 	useEffect(() => {
 		darkTheme
 			? document
-					.querySelectorAll('.black')
-					.forEach((element) => element.classList.add('white'))
+				.querySelectorAll('.black')
+				.forEach((element) => element.classList.add('white'))
 			: document
-					.querySelectorAll('.white')
-					.forEach((element) => element.classList.remove('white'))
+				.querySelectorAll('.white')
+				.forEach((element) => element.classList.remove('white'))
 		darkTheme
 			? document
-					.querySelectorAll('.btn-light')
-					.forEach((element) => element.classList.add('btn-dark'))
+				.querySelectorAll('.btn-light')
+				.forEach((element) => element.classList.add('btn-dark'))
 			: document
-					.querySelectorAll('.btn-dark')
-					.forEach((element) => element.classList.remove('btn-dark'))
+				.querySelectorAll('.btn-dark')
+				.forEach((element) => element.classList.remove('btn-dark'))
 	}, [darkTheme, itemOffset])
 
 	const endOffset = itemOffset + itemsPerPage
@@ -50,20 +49,6 @@ const Content = ({ blogs }) => {
 	const handlePageClick = (event) => {
 		const newOffset = (event.selected * itemsPerPage) % blogs.length
 		setItemOffset(newOffset)
-	}
-
-	const CustomLink = ({ pageNumber, isActive, onClick }) => {
-		return (
-			<motion.li
-				whileHover={{ scale: 1.1 }}
-				whileTap={{ scale: 0.9 }}
-				className={`page-item${isActive ? ' active' : ''}`}
-			>
-				<a onClick={onClick} className="page-link" href="/">
-					{pageNumber}
-				</a>
-			</motion.li>
-		)
 	}
 
 	return (
@@ -76,18 +61,13 @@ const Content = ({ blogs }) => {
 						blogs={currentBlogs}
 						setSelectedId={setSelectedId}
 					/>
-					<motion.div
-						initial={{ opacity: 0 }}
-						animate={{ opacity: 1, x: 10 }}
-						exit={{ opacity: 0 }}
-						style={{ marginTop: '1rem' }}
-					>
+					<div style={{marginTop: '1rem'}}>
 						<ReactPaginate
 							breakLabel="..."
 							previousLabel="<"
 							nextLabel=">"
 							onPageChange={handlePageClick}
-							pageRangeDisplayed={5}
+							pageRangeDisplayed={3}
 							pageCount={pageCount}
 							renderOnZeroPageCount={null}
 							containerClassName="pagination"
@@ -95,9 +75,9 @@ const Content = ({ blogs }) => {
 							pageLinkClassName="page-num"
 							previousLinkClassName="page-num"
 							activeLinkClassName="page-num-active"
-							PageLinkComponent={CustomLink}
+							marginPagesDisplayed={2}
 						/>
-					</motion.div>
+					</div>
 				</div>
 				<div className="blog-post">
 					{selectedId === -1 ? (
