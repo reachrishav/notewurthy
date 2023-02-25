@@ -31,6 +31,10 @@
 	justify-content: space-around;
 }
 
+.space-between {
+	justify-content: space-between;
+}
+
 .blue {
 	color: #42b6f3;
 }
@@ -248,12 +252,11 @@ header {
 	outline: none;
 }
 
-/* .vertical-scroll {
+.vertical-scroll {
 	scrollbar-width: thin;
 	scrollbar-color: rgba(155, 155, 155, 0.5) transparent;
-	overflow-y: hidden;
-	visibility: hidden;
-} */
+	overflow-y: auto;
+}
 
 /* .vertical-scroll-blog-post {
 	scrollbar-width: thin;
@@ -267,7 +270,7 @@ header {
 } */
 
 .blogs {
-	height: 85vh;
+	/* height: 85vh; */
 	padding-right: 1em;
 }
 
@@ -379,7 +382,7 @@ header {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-bottom: 10rem;
+	/* margin-bottom: 10rem; */
 	font-size: 1.2rem;
 	gap: 5px;
 }

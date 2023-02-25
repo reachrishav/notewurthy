@@ -59,7 +59,7 @@ const Content = ({ blogs }) => {
 				whileTap={{ scale: 0.9 }}
 				className={`page-item${isActive ? ' active' : ''}`}
 			>
-				<a onClick={onClick} className="page-link">
+				<a onClick={onClick} className="page-link" href="/">
 					{pageNumber}
 				</a>
 			</motion.li>
@@ -70,9 +70,9 @@ const Content = ({ blogs }) => {
 		<div className="content flex" style={themeStyles}>
 			<Header setSelectedId={setSelectedId} />
 			<Split sizes={[40, 60]} className="flex page-content">
-				<div className="all-blogs vertical-scroll">
+				<div className="all-blogs flex space-between flex-direction-col">
 					<Blogs
-						className="ml-2-5em flex flex-direction-col blogs blog-content"
+						className="ml-2-5em flex flex-direction-col blogs blog-content vertical-scroll"
 						blogs={currentBlogs}
 						setSelectedId={setSelectedId}
 					/>
