@@ -4,8 +4,8 @@ function WelcomePost() {
   return (
     <>
       <div
-        className='flex align-items-center justify-content-center'
-        style={{ height: "100%", flexDirection: "column", gap: "50px" }}
+        className='flex align-items-center justify-content-space-evenly'
+        style={{ height: "100%", flexDirection: "column", gap: "5px" }}
       >
         <img
           src={WelcomeIllustration}
