@@ -1,99 +1,106 @@
-import React, { useEffect, useState } from 'react'
-import Header from './Header'
-import Blogs from './Blogs'
-import Footer from './Footer'
-import { useTheme } from '../ThemeContext'
-import BlogPost from './BlogPost'
-import Split from 'react-split'
-import WelcomePost from './WelcomePost'
-import ReactPaginate from 'react-paginate'
+import React, { useEffect, useState } from "react"
+import Header from "./Header"
+import Blogs from "./Blogs"
+import Footer from "./Footer"
+import { useTheme } from "../ThemeContext"
+import BlogPost from "./BlogPost"
+import Split from "react-split"
+import WelcomePost from "./WelcomePost"
+import ReactPaginate from "react-paginate"
 
 const Content = ({ blogs }) => {
-	const darkTheme = useTheme()
-	const itemsPerPage = 3
+  const darkTheme = useTheme()
+  const itemsPerPage = 3
 
-	const [selectedId, setSelectedId] = useState(-1)
+  const [selectedId, setSelectedId] = useState(-1)
 
-	const themeStyles = {
-		backgroundColor: darkTheme ? '#23272f' : '#ECF2FF',
-		color: darkTheme ? '#ECF2FF' : '#23272f',
-		transition: 'background-color .5s ease',
-	}
-	const [itemOffset, setItemOffset] = useState(0)
+  const themeStyles = {
+    backgroundColor: darkTheme ? "#23272f" : "#ECF2FF",
+    color: darkTheme ? "#ECF2FF" : "#23272f",
+    transition: "background-color .5s ease",
+  }
+  const [itemOffset, setItemOffset] = useState(0)
 
-	useEffect(() => {
-		setSelectedId(selectedId)
-	}, [selectedId])
+  useEffect(() => {
+    setSelectedId(selectedId)
+  }, [selectedId])
 
-	useEffect(() => {
-		darkTheme
-			? document
-				.querySelectorAll('.black')
-				.forEach((element) => element.classList.add('white'))
-			: document
-				.querySelectorAll('.white')
-				.forEach((element) => element.classList.remove('white'))
-		darkTheme
-			? document
-				.querySelectorAll('.btn-light')
-				.forEach((element) => element.classList.add('btn-dark'))
-			: document
-				.querySelectorAll('.btn-dark')
-				.forEach((element) => element.classList.remove('btn-dark'))
-	}, [darkTheme, itemOffset])
+  useEffect(() => {
+    darkTheme
+      ? document
+          .querySelectorAll(".black")
+          .forEach(element => element.classList.add("white"))
+      : document
+          .querySelectorAll(".white")
+          .forEach(element => element.classList.remove("white"))
+    darkTheme
+      ? document
+          .querySelectorAll(".btn-light")
+          .forEach(element => element.classList.add("btn-dark"))
+      : document
+          .querySelectorAll(".btn-dark")
+          .forEach(element => element.classList.remove("btn-dark"))
+    darkTheme
+      ? document
+          .querySelectorAll(".page-num-white")
+          .forEach(element => element.classList.add("page-num-dark"))
+      : document
+          .querySelectorAll(".page-num-dark")
+          .forEach(element => element.classList.remove("page-num-dark"))
+  }, [darkTheme, itemOffset])
 
-	const endOffset = itemOffset + itemsPerPage
-	const currentBlogs = blogs.slice(itemOffset, endOffset)
-	const pageCount = Math.ceil(blogs.length / itemsPerPage)
+  const endOffset = itemOffset + itemsPerPage
+  const currentBlogs = blogs.slice(itemOffset, endOffset)
+  const pageCount = Math.ceil(blogs.length / itemsPerPage)
 
-	const handlePageClick = (event) => {
-		const newOffset = (event.selected * itemsPerPage) % blogs.length
-		setItemOffset(newOffset)
-	}
+  const handlePageClick = event => {
+    const newOffset = (event.selected * itemsPerPage) % blogs.length
+    setItemOffset(newOffset)
+  }
 
-	return (
-		<div className="content flex" style={themeStyles}>
-			<Header setSelectedId={setSelectedId} />
-			<Split sizes={[40, 60]} className="flex page-content">
-				<div className="all-blogs flex space-between flex-direction-col">
-					<Blogs
-						className="ml-1-5em flex flex-direction-col blogs blog-content vertical-scroll"
-						blogs={currentBlogs}
-						setSelectedId={setSelectedId}
-					/>
-					<div style={{marginTop: '1rem'}}>
-						<ReactPaginate
-							breakLabel="..."
-							previousLabel="<"
-							nextLabel=">"
-							onPageChange={handlePageClick}
-							pageRangeDisplayed={3}
-							pageCount={pageCount}
-							renderOnZeroPageCount={null}
-							containerClassName="pagination"
-							nextLinkClassName="page-num"
-							pageLinkClassName="page-num"
-							previousLinkClassName="page-num"
-							activeLinkClassName="page-num-active"
-							marginPagesDisplayed={2}
-						/>
-					</div>
-				</div>
-				<div className="blog-post">
-					{selectedId === -1 ? (
-						<WelcomePost />
-					) : (
-						<BlogPost
-							blogs={blogs}
-							id={selectedId}
-							setSelectedId={setSelectedId}
-						/>
-					)}
-				</div>
-			</Split>
-			<Footer />
-		</div>
-	)
+  return (
+    <div className='content flex' style={themeStyles}>
+      <Header setSelectedId={setSelectedId} />
+      <Split sizes={[40, 60]} className='flex page-content'>
+        <div className='all-blogs flex space-between flex-direction-col'>
+          <Blogs
+            className='ml-1-5em flex flex-direction-col blogs blog-content vertical-scroll'
+            blogs={currentBlogs}
+            setSelectedId={setSelectedId}
+          />
+          <div style={{ marginTop: "1rem" }}>
+            <ReactPaginate
+              breakLabel='...'
+              previousLabel='<'
+              nextLabel='>'
+              onPageChange={handlePageClick}
+              pageRangeDisplayed={3}
+              pageCount={pageCount}
+              renderOnZeroPageCount={null}
+              containerClassName='pagination'
+              nextLinkClassName='page-num page-num-white page-lr-icon'
+              pageLinkClassName='page-num page-num-white'
+              previousLinkClassName='page-num page-num-white page-lr-icon'
+              activeLinkClassName='page-num-active'
+              marginPagesDisplayed={2}
+            />
+          </div>
+        </div>
+        <div className='blog-post'>
+          {selectedId === -1 ? (
+            <WelcomePost />
+          ) : (
+            <BlogPost
+              blogs={blogs}
+              id={selectedId}
+              setSelectedId={setSelectedId}
+            />
+          )}
+        </div>
+      </Split>
+      <Footer />
+    </div>
+  )
 }
 
 export default Content

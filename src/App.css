@@ -1,8 +1,13 @@
+@font-face {
+	font-family: 'Avenir';
+	src: URL('../src/assets/euclid.ttf') format('truetype');
+}
+
 * {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Avenir', sans-serif;
 }
 
 #root {
@@ -85,8 +90,8 @@
 }
 
 .blog > div {
-	margin-top: 10px;
-	margin-bottom: 10px;
+	margin-top: 5px;
+	margin-bottom: 5px;
 }
 
 .blog {
@@ -101,17 +106,17 @@
 
 .date-font {
 	line-height: 1;
-	font-size: 13px;
+	font-size: 11px;
 }
 
 .btn-read-more {
 	display: inline-block;
 	font-weight: 500;
-	padding: 0 20px;
-	border-radius: 18px;
-	height: 36px;
-	line-height: 36px;
-	font-size: 13px;
+	padding: 0 15px;
+	border-radius: 15px;
+	height: 30px;
+	line-height: 30px;
+	font-size: 0.65rem;
 }
 
 .btn-light {
@@ -388,7 +393,7 @@ header {
 	justify-content: center;
 	align-items: center;
 	/* margin-bottom: 10rem; */
-	font-size: 1rem;
+	font-size: 0.8rem;
 	gap: 5px;
 }
 
@@ -397,10 +402,26 @@ header {
 	cursor: pointer;
 	border-radius: 4px;
 	font-weight: 400;
-	background-color: #343a46e9;
 	transition: all 0.3s ease-in;
 }
 
 .pagination .page-num-active {
-	background-color: #2b98d3f5;
+	background-color: #2b98d376 !important;
+}
+
+.page-num-dark {
+	background-color: #343a46e9 !important;
+}
+.page-num-white {
+	background-color: aliceblue;
+}
+
+.page-num:hover {
+	background-color: #2b98d3a2 !important;
+}
+.blog-list-title{
+	font-size: 1rem;
+}
+.blog-list-description {
+	font-size: 0.8rem;
 }
