@@ -11,7 +11,9 @@ const Blog = ({ blog, setSelectedId }) => {
       <div>
         <button
           onClick={() => setSelectedId(blog.id)}
-          className='no-txt-decor black blue-on-hover blog-link'
+          className={`no-txt-decor black blue-on-hover blog-link ${
+            darkTheme ? "white" : ""
+          }`}
         >
           <h2 className='blog-list-title medium-font-weight'>{blog.title}</h2>
         </button>
