@@ -25,30 +25,6 @@ const Content = ({ blogs }) => {
     setSelectedId(selectedId)
   }, [selectedId])
 
-  useEffect(() => {
-    darkTheme
-      ? document
-          .querySelectorAll(".black")
-          .forEach(element => element.classList.add("white"))
-      : document
-          .querySelectorAll(".white")
-          .forEach(element => element.classList.remove("white"))
-    darkTheme
-      ? document
-          .querySelectorAll(".btn-light")
-          .forEach(element => element.classList.add("btn-dark"))
-      : document
-          .querySelectorAll(".btn-dark")
-          .forEach(element => element.classList.remove("btn-dark"))
-    darkTheme
-      ? document
-          .querySelectorAll(".page-num-white")
-          .forEach(element => element.classList.add("page-num-dark"))
-      : document
-          .querySelectorAll(".page-num-dark")
-          .forEach(element => element.classList.remove("page-num-dark"))
-  }, [darkTheme, itemOffset])
-
   const endOffset = itemOffset + itemsPerPage
   const currentBlogs = blogs.slice(itemOffset, endOffset)
   const pageCount = Math.ceil(blogs.length / itemsPerPage)
@@ -78,9 +54,15 @@ const Content = ({ blogs }) => {
               pageCount={pageCount}
               renderOnZeroPageCount={null}
               containerClassName='pagination'
-              nextLinkClassName='page-num page-num-white page-lr-icon'
-              pageLinkClassName='page-num page-num-white'
-              previousLinkClassName='page-num page-num-white page-lr-icon'
+              nextLinkClassName={`page-num page-num-white page-lr-icon ${
+                darkTheme ? "page-num-dark" : ""
+              }`}
+              pageLinkClassName={`page-num page-num-white ${
+                darkTheme ? "page-num-dark" : ""
+              }`}
+              previousLinkClassName={`page-num page-num-white page-lr-icon ${
+                darkTheme ? "page-num-dark" : ""
+              }`}
               activeLinkClassName='page-num-active'
               marginPagesDisplayed={2}
             />

@@ -1,6 +1,8 @@
 import { motion } from "framer-motion"
+import { useTheme } from "../ThemeContext"
 
 const Blog = ({ blog, setSelectedId }) => {
+  const darkTheme = useTheme()
   return (
     <div className='blog'>
       <div className='light-font-weight date-font light-text-color'>
@@ -21,7 +23,7 @@ const Blog = ({ blog, setSelectedId }) => {
       </div>
       <motion.button
         onClick={() => setSelectedId(blog.id)}
-        className='btn-read-more btn-light'
+        className={`btn-read-more btn-light ${darkTheme ? "btn-dark" : ""}`}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
       >
