@@ -1,7 +1,7 @@
 export const Blogs = [
 	{
 		id: 1,
-		title: 'WFH or WFO: Isolation or Distraction?',
+		title: 'WFH or WFO: Isolation or Distraction?somethinslfknasidlfksjlakjjlskjdlkfjalksjldkjflakjlsdkj',
 		description: `Working from home (WFH) vs. working from the office (WFO), the ultimate battle. It's like choosing between sweatpants or dress pants, or between Netflix and socializing. Let's break it down and see why WFH might have the upper hand.
 
 WFH has many advantages. First and foremost, you get to work in your pajamas all day long. No more struggling to find that perfect work outfit or trying to fit into those uncomfortable dress shoes. Plus, you can save money on your wardrobe and skip the dry-cleaning bills.

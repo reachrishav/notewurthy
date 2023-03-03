@@ -19,7 +19,7 @@ const Blog = ({ blog, setSelectedId }) => {
             darkTheme ? "white" : ""
           }`}
         >
-          <h2 className='blog-list-title medium-font-weight'>{blog.title}</h2>
+          <h2 className='blog-list-title medium-font-weight word-wrap-anywhere left-aligned-text'>{blog.title}</h2>
         </button>
       </div>
       <div className='light-font-weight light-text-color'>

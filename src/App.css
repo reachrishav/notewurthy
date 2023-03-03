@@ -314,6 +314,7 @@ header {
 .blog-post-header {
 	align-items: center;
 	justify-content: space-between;
+	margin-bottom: 0.2rem;
 }
 
 .content {
@@ -365,7 +366,7 @@ header {
 	white-space: pre-wrap;
 }
 .blog-post-font {
-	font-family: 'Vollkorn', serif;
+	font-family: 'Poppins', serif;
 }
 .blog-post-inner-container:hover {
 	overflow-y: auto;
@@ -427,4 +428,16 @@ header {
 }
 .blog-list-description {
 	font-size: 0.8rem;
+}
+
+.position-fixed {
+	position: fixed;
+}
+
+.word-wrap-anywhere {
+	word-wrap: anywhere;
+}
+
+.left-aligned-text {
+	text-align: left;
 }
