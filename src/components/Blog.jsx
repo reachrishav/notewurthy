@@ -6,11 +6,13 @@ const Blog = ({ blog, setSelectedId }) => {
   return (
     <div className='blog'>
       <div className='light-font-weight date-font light-text-color'>
-        {new Date(blog.created_at / 1000).toLocaleString("en-US", {
-          month: "short",
-          day: "2-digit",
-          year: "numeric",
-        })}
+        {new Date(blog.created_at / 1000)
+          .toLocaleString("en-US", {
+            month: "long",
+            day: "2-digit",
+            year: "numeric",
+          })
+          .toUpperCase()}
       </div>
       <div>
         <button
@@ -19,7 +21,9 @@ const Blog = ({ blog, setSelectedId }) => {
             darkTheme ? "white" : ""
           }`}
         >
-          <h2 className='blog-list-title medium-font-weight word-wrap-anywhere left-aligned-text'>{blog.title}</h2>
+          <h2 className='blog-list-title medium-font-weight word-wrap-anywhere left-aligned-text'>
+            {blog.title}
+          </h2>
         </button>
       </div>
       <div className='light-font-weight light-text-color'>
