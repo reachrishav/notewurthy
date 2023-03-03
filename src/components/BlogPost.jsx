@@ -50,7 +50,7 @@ const BlogPost = ({ blogs, id, setSelectedId }) => {
 						style={{ zIndex: 1, right: '1.35rem' }}
 					></motion.i>
 					<div className="blog-post-header flex">
-						<h1 className="blog-post-font" style={{fontWeight: '600'}}>{filteredBlog.title}</h1>
+						<h1 className="blog-post-font word-wrap-anywhere" style={{fontWeight: '600'}}>{filteredBlog.title}</h1>
 					</div>
 					<br />
 					<p className="blog-post-font" style={{fontWeight: '200', fontSize: '0.92rem'}}>
