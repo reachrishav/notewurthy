@@ -24,7 +24,7 @@ const BlogPost = ({ blogs, id, setSelectedId }) => {
 		boxShadow: '0 1px 7px 0 rgba(0,0,0,.6)',
 	}
 
-	const filteredBlog = blogs.find((blog) => blog.id === parseInt(id))
+	const filteredBlog = blogs.find((blog) => blog.id === id)
 	if (!filteredBlog) {
 		return <NotFound />
 	}
