@@ -433,3 +433,11 @@ header {
 .position-fixed {
 	position: fixed;
 }
+
+.word-wrap-anywhere {
+	word-wrap: anywhere;
+}
+
+.left-aligned-text {
+	text-align: left;
+}
