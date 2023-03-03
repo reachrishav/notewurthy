@@ -8,7 +8,7 @@ import Split from "react-split"
 import WelcomePost from "./WelcomePost"
 import ReactPaginate from "react-paginate"
 
-const Content = ({ blogs }) => {
+const Content = ({ blogs, isLoading }) => {
   const darkTheme = useTheme()
   const itemsPerPage = 3
 
@@ -39,6 +39,7 @@ const Content = ({ blogs }) => {
             className='ml-1-5em flex flex-direction-col blogs blog-content vertical-scroll'
             blogs={currentBlogs}
             setSelectedId={setSelectedId}
+            isLoading={isLoading}
           />
           <div style={{ marginTop: "1rem" }}>
             <ReactPaginate
