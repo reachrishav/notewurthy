@@ -22,7 +22,12 @@ function App() {
 	return (
 		<ThemeProvider>
 			<Routes>
-				<Route path="/" element={<Content blogs={blogs} isLoading={isLoading} />} />
+				<Route path="/" element={
+					<Content 
+						blogs={blogs.sort((a,b) => b.created_at - a.created_at)} 
+						isLoading={isLoading} 
+					/>} 
+				/>
 				<Route path="*" element={<NotFound />} />
 			</Routes>
 		</ThemeProvider>
