@@ -6,7 +6,11 @@ const Blog = ({ blog, setSelectedId }) => {
   return (
     <div className='blog'>
       <div className='light-font-weight date-font light-text-color'>
-        {blog.datePublished}
+        {new Date(blog.created_at / 1000).toLocaleString("en-US", {
+          month: "short",
+          day: "2-digit",
+          year: "numeric",
+        })}
       </div>
       <div>
         <button
@@ -20,7 +24,9 @@ const Blog = ({ blog, setSelectedId }) => {
       </div>
       <div className='light-font-weight light-text-color'>
         <p className='blog-list-description'>
-          {blog.description.split(" ").slice(0, 25).join(" ") + "..."}
+          {`${blog.description.split(" ").slice(0, 25).join(" ")}${
+            blog.description.split(" ").length > 25 ? "..." : ""
+          }`}
         </p>
       </div>
       <motion.button

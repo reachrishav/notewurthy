@@ -21,10 +21,6 @@ const Content = ({ blogs }) => {
   }
   const [itemOffset, setItemOffset] = useState(0)
 
-  useEffect(() => {
-    setSelectedId(selectedId)
-  }, [selectedId])
-
   const endOffset = itemOffset + itemsPerPage
   const currentBlogs = blogs.slice(itemOffset, endOffset)
   const pageCount = Math.ceil(blogs.length / itemsPerPage)
