@@ -33,7 +33,7 @@ const Content = ({ blogs, isLoading }) => {
   return (
     <div className='content flex' style={themeStyles}>
       <Header setSelectedId={setSelectedId} />
-      <Split sizes={[40, 60]} className='flex page-content'>
+      <Split sizes={[36, 64]} className='flex page-content'>
         <div className='all-blogs flex space-between flex-direction-col'>
           <Blogs
             className='ml-1-5em flex flex-direction-col blogs blog-content vertical-scroll'
