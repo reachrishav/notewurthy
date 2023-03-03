@@ -36,27 +36,21 @@ const BlogPost = ({ blogs, id, setSelectedId }) => {
 				initial={{ opacity: 0, x: '150vw' }}
 				animate={{ opacity: 1, x: 0 }}
 				transition={{ duration: 0.4 }}
-				key={id}
-				// animate={controls}
-				// variants={{
-				// 	initialState: { x: 0 },
-				// 	targetState: { opacity: 0 },
-				// }}
-				// transition={{ duration: 0.2 }}
-			>
-				<div className="blog-post-inner-container">
+				key={id}>
+				<div className="blog-post-inner-container flex flex-direction-col">
+					<motion.i
+						className="fa-duotone fa-circle-xmark xcircle-icon fa-lg position-fixed mt-10"
+						onClick={() => {
+							setSelectedId(-1)
+							setIsVisible(false)
+						}}
+						// onClick={handleClick}
+						whileHover={{ scale: 1.1 }}
+						whileTap={{ scale: 0.9 }}
+						style={{ zIndex: 1, right: '1.35rem' }}
+					></motion.i>
 					<div className="blog-post-header flex">
 						<h1 className="blog-post-font">{filteredBlog.title}</h1>
-						<motion.i
-							className="fa-duotone fa-circle-xmark xcircle-icon fa-lg"
-							onClick={() => {
-								setSelectedId(-1)
-								setIsVisible(false)
-							}}
-							// onClick={handleClick}
-							whileHover={{ scale: 1.1 }}
-							whileTap={{ scale: 0.9 }}
-						></motion.i>
 					</div>
 					<br />
 					<p className="light-font-weight blog-post-font">

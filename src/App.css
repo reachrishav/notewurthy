@@ -428,3 +428,7 @@ header {
 .blog-list-description {
 	font-size: 0.8rem;
 }
+
+.position-fixed {
+	position: fixed;
+}
