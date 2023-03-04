@@ -264,10 +264,44 @@ header {
 	outline: none;
 }
 
+/* Hide scrollbar by default */
 .vertical-scroll {
+	overflow-y: auto;
+	scrollbar-width: none; /* Firefox and Edge */
+  }
+  
+  /* Hide scrollbar in Chrome and Safari */
+  .vertical-scroll::-webkit-scrollbar {
+	display: none;
+  }
+  
+  /* Show scrollbar in Firefox and Edge */
+  .vertical-scroll:hover,
+  .vertical-scroll:focus {
 	scrollbar-width: thin;
 	scrollbar-color: rgba(155, 155, 155, 0.5) transparent;
+  }
+  /* Style scrollbar thumb in Chrome, Safari, and Edge */
+.vertical-scroll::-webkit-scrollbar-thumb {
+	background-color: rgba(155, 155, 155, 0.5);
+  }
+  
+  /* Style scrollbar in Edge */
+  .vertical-scroll:hover::-webkit-scrollbar {
+	display: block;
+	/* scrollbar-width: thin */
+	width: 2px;
+  }
+  
+  .vertical-scroll:hover::-webkit-scrollbar-thumb {
+	background-color: rgba(155, 155, 155, 0.5);
+  }
+
+/* .vertical-scroll {
+	/* scrollbar-width: thin;
+	scrollbar-color: rgba(155, 155, 155, 0.5) transparent; 
 	overflow-y: auto;
+	/* visibility: hidden; 
 }
 
 /* .vertical-scroll-blog-post {
@@ -275,11 +309,13 @@ header {
 	scrollbar-color: rgba(155, 155, 155, 0.5) transparent;
 	overflow-y: auto;
 } */
-/* .blog-content,
+/* .blog-content, 
 .vertical-scroll:hover,
 .vertical-scroll:focus {
-	visibility: visible;
-} */
+	/* visibility: visible; 
+	scrollbar-width: thin;
+	scrollbar-color: rgba(155, 155, 155, 0.5) transparent;
+}  */
 
 .blogs {
 	/* height: 85vh; */
