@@ -402,7 +402,8 @@ header {
 	white-space: pre-wrap;
 }
 .blog-post-font {
-	font-family: 'Poppins', serif;
+	/* font-family: 'Poppins', serif; */
+	font-family: 'Spectral', serif;
 }
 .blog-post-inner-container:hover {
 	overflow-y: auto;
