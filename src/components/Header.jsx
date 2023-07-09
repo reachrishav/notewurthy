@@ -35,9 +35,11 @@ const Header = ({ setSelectedId }) => {
             transition={{ duration: 0.3 }}
           >
             {darkTheme ? (
-              <i className='fa-regular fa-sun-bright white fa-lg'></i>
+              // <i className='fa-regular fa-sun-bright white fa-lg'></i>
+              <i class="fa-solid fa-sun"></i>
             ) : (
-              <i className='fa-regular fa-moon fa-lg'></i>
+              // <i className='fa-regular fa-moon fa-lg'></i>
+              <i class="fa-solid fa-moon"></i>
             )}
           </motion.button>
         </div>
