@@ -2,6 +2,14 @@
 	font-family: 'Avenir';
 	src: URL('../src/assets/euclid.ttf') format('truetype');
 }
+@font-face {
+	font-family: 'Dancing_Script';
+	src: URL('../src/assets/dancingscript-regular.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Spectrall';
+	src: URL('../src/assets/spectral.ttf') format('truetype');
+}
 
 * {
 	box-sizing: border-box;
@@ -170,7 +178,7 @@ footer > p {
 }
 
 .cursive {
-	font-family: 'Dancing Script', cursive;
+	font-family: 'Dancing_Script', cursive;
 	font-size: 1.5em;
 }
 
@@ -403,7 +411,7 @@ header {
 }
 .blog-post-font {
 	/* font-family: 'Poppins', serif; */
-	font-family: 'Spectral', serif;
+	font-family: 'Spectrall', serif;
 }
 .blog-post-inner-container:hover {
 	overflow-y: auto;

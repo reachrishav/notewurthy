@@ -13,6 +13,7 @@ function WelcomePost() {
           className='welcome-illustration'
         />
         <h2>Hey there! Welcome 🙂</h2>
+        <p>Select an item to read</p>
       </div>
     </>
   )

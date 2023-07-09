@@ -27,7 +27,8 @@ const BlogPost = ({ blogs, id, setSelectedId }) => {
     >
       <div className='blog-post-inner-container flex flex-direction-col'>
         <motion.i
-          className='fa-duotone fa-circle-xmark xcircle-icon fa-lg position-fixed mt-10'
+          className='fa-regular fa-circle-xmark xcircle-icon fa-lg position-fixed mt-10'
+          // <i class="fa-duotone fa-circle-xmark"></i>
           onClick={() => {
             setSelectedId(-1)
           }}
